@@ -15,8 +15,8 @@ ScrollReveal({
     delay: 200
 });
 
-ScrollReveal().reveal('.home-content,.heading', { origin: 'top' });
-ScrollReveal().reveal('.home-img,.services-container, .portfolio-box, .contact form', { origin: 'bottom ' });
+ScrollReveal().reveal('.home-content,.heading,.about-content p', { origin: 'top' });
+ScrollReveal().reveal('.home-img,.services-container, .portfolio-box, .contact form, .gallery-container' ,{ origin: 'bottom ' });
 
 const typed = new Typed('.multi',{
     strings: ['Frontend Developer', 'Tablist', 'Core Developer', 'Student'],
@@ -26,3 +26,15 @@ const typed = new Typed('.multi',{
     backDelay:1000,
     loop: true
 });
+
+var fullImgBox = document.getElementById("fullImgBox");
+var fullImg = document.getElementById("fullImg");
+
+function openFullImg(pic){
+    fullImgBox.style.display = "flex";
+    fullImg.src = pic;
+}
+
+function closeFullImg(){
+    fullImgBox.style.display = "none";
+}
